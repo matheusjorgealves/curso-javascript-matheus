@@ -12,9 +12,10 @@ function verificar(){
         var genero = ''
         if (fsex[0].checked) {
             genero = 'Homem'
+            res.innerHTML = `Você é um ${genero} com ${idade} anos de idade`
         } else if (fsex[1].checked) {
             genero = 'Mulher'
+            res.innerHTML = `Você é uma ${genero} com ${idade} anos de idade`
         }
-        res.innerHTML = `Detectamos ${genero} com ${idade} anos de idade`
     }
     }
