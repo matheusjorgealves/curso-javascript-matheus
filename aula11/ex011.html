@@ -13,13 +13,13 @@
 
     <script>
         function verificar(){
-            var pais = window.document.getElementById('txt')
+            var pais = window.document.getElementById('txt').value.toLowerCase()
             var res = window.document.getElementById('res')
 
-            if(pais=='brasil') {
-                res.innerHTML ='<p> Você NÃO é <strong> estrangeiro </strong> </p>'
+            if(pais == 'brasil') {
+                res.innerHTML = '<p> Você NÃO é <strong> estrangeiro </strong> </p>'
             } else{
-                res.innerHTML =' <p> Você é <strong> estrangeiro </strong> </p>'
+                res.innerHTML = '<p> Você é <strong> estrangeiro </strong> </p>'
             }
         }
     </script>
