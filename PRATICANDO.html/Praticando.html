@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaja com o DOM</title>
+    <style>
+        p#dom{
+            font:  50pt arial;
+            height: 400px;
+            text-align: center;
+            line-height: 400px;
+            background-color: black;
+            color: aliceblue;
+        }
+        h1#titulo{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo"> INTERAJA COM O 'BLOCO' CHAMADO DOM</h1>
+    <p id="dom">DOM</p>
+
+    <script>
+
+        var dom = window.document.getElementById(`dom`)
+        dom.addEventListener('mouseenter' , entrar)
+        dom.addEventListener('click' , clicar)
+        dom.addEventListener('mouseout' , sair)
+
+        function entrar(){
+            dom.style.backgroundColor ='red'
+            dom.style.color ='black'
+            dom.innerHTML ='Entrou'
+        }
+        function clicar(){
+            dom.style.backgroundColor ='white'
+            dom.style.color ='black'
+            dom.innerHTML ='clicou'
+        }
+        function sair(){
+            dom.style.backgroundColor ='black'
+            dom.style.color ='white'
+            dom.innerHTML ='DOM'
+        }
+    </script>
+</body>
+</html>
